@@ -41,8 +41,8 @@
                     <li class="nav-item {% block usuario_menu %}{% endblock %}">
                         <a class="nav-link" href="{{ path('lista_usuarios') }}">Usuarios</a>
                     </li>
-                    <li class="nav-item" {% block dd_menu %}{% endblock %}>
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                    <li class="nav-item {% block registro %}{% endblock %}">
+                        <a class="nav-link" href="{{ path('registro') }}">Registro</a>
                     </li>
                 </ul>
                 <form class="form-inline mt-2 mt-md-0">
