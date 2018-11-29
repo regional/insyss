@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="solicitud")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\solicitudRepository")
  */
-class solicitud
+class Solicitud
 {
     /**
      * @var int
@@ -40,36 +40,26 @@ class solicitud
      *
      * @ORM\Column(name="fecha", type="date")
      */
+
     private $fecha;
 
     /**
-     * @var string
+     * @var Usuario
      *
-     * @ORM\Column(name="usuario_solicitante_id", type="string", length=255)
+     *
+     * @ORM\ManyToOne(targetEntity="Usuario", inversedBy="misSolicitudes")
      */
-    private $usuarioSolicitanteId;
+
+    private $usuarioSolicitante;
 
     /**
-     * @var string
+     * @var Usuario
      *
-     * @ORM\Column(name="estado", type="string", length=255)
-     */
-    private $estado;
-
-    /**
-     * @var string
      *
-     * @ORM\Column(name="usuario_asignado_id", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="Usuario", inversedBy="misAsignaciones")
      */
-    private $usuarioAsignadoId;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="campo_afin_id", type="string", length=255)
-     */
-    private $campoAfinId;
-
+    private $usuarioAsignado;
 
     /**
      * Get id
@@ -151,102 +141,6 @@ class solicitud
     public function getFecha()
     {
         return $this->fecha;
-    }
-
-    /**
-     * Set usuarioSolicitanteId
-     *
-     * @param string $usuarioSolicitanteId
-     *
-     * @return solicitud
-     */
-    public function setUsuarioSolicitanteId($usuarioSolicitanteId)
-    {
-        $this->usuarioSolicitanteId = $usuarioSolicitanteId;
-
-        return $this;
-    }
-
-    /**
-     * Get usuarioSolicitanteId
-     *
-     * @return string
-     */
-    public function getUsuarioSolicitanteId()
-    {
-        return $this->usuarioSolicitanteId;
-    }
-
-    /**
-     * Set estado
-     *
-     * @param string $estado
-     *
-     * @return solicitud
-     */
-    public function setEstado($estado)
-    {
-        $this->estado = $estado;
-
-        return $this;
-    }
-
-    /**
-     * Get estado
-     *
-     * @return string
-     */
-    public function getEstado()
-    {
-        return $this->estado;
-    }
-
-    /**
-     * Set usuarioAsignadoId
-     *
-     * @param string $usuarioAsignadoId
-     *
-     * @return solicitud
-     */
-    public function setUsuarioAsignadoId($usuarioAsignadoId)
-    {
-        $this->usuarioAsignadoId = $usuarioAsignadoId;
-
-        return $this;
-    }
-
-    /**
-     * Get usuarioAsignadoId
-     *
-     * @return string
-     */
-    public function getUsuarioAsignadoId()
-    {
-        return $this->usuarioAsignadoId;
-    }
-
-    /**
-     * Set campoAfinId
-     *
-     * @param string $campoAfinId
-     *
-     * @return solicitud
-     */
-    public function setCampoAfinId($campoAfinId)
-    {
-        $this->campoAfinId = $campoAfinId;
-
-        return $this;
-    }
-
-    /**
-     * Get campoAfinId
-     *
-     * @return string
-     */
-    public function getCampoAfinId()
-    {
-        return $this->campoAfinId;
     }
 }
 
