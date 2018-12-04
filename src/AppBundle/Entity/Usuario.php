@@ -92,6 +92,21 @@ class Usuario implements UserInterface,  \Serializable
         $this->usuarioAsignado = new ArrayCollection();
     }
 
+    /*
+     * @var
+     * @ORM\OneToMany(targetEntity="usuario_campos_afines", mappedBy="usuarioId")
+     */
+
+    private $campoAfin;
+
+    /**
+     * Usuario constructor.
+     * @param int $id
+     */
+    public function __construct3()
+    {
+        $this->usuarioId = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -254,7 +269,7 @@ class Usuario implements UserInterface,  \Serializable
             $this->id,
             $this->nombre,
             $this->email
-            ) = $this->unserialize($serialized);
+            ) = unserialize($serialized, ['allowed_classes' => false]);
         // TODO: Implement unserialize() method.
     }
 

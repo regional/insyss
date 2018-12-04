@@ -21,9 +21,10 @@ security:
             security: false
 
         main:
-            pattern: ^/
-            http_basic: ~
-            provider: db
+            anonymous: ~
+#            pattern: ^/
+#           http_basic: ~
+#           provider: db
             form_login:
                 login_path: login
                 check_path: login

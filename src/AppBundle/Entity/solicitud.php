@@ -61,6 +61,7 @@ class Solicitud
 
     private $usuarioAsignado;
 
+
     /**
      * Get id
      *
