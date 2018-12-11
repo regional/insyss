@@ -44,6 +44,12 @@
                     <li class="nav-item {% block registro %}{% endblock %}">
                         <a class="nav-link" href="{{ path('registro') }}">Registro</a>
                     </li>
+                    <li class="nav-item {% block login %}{% endblock %}">
+                        <a class="nav-link" href="{{ path('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item {% block CampoAfin %}{% endblock %}">
+                        <a class="nav-link" href="{{ path('campos_afines') }}">Campos Afines</a>
+                    </li>
                 </ul>
                 <form class="form-inline mt-2 mt-md-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="¿Qué buscas?" aria-label="Buscar">

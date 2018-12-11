@@ -22,3 +22,7 @@
 #bienvenido_slider spam{
     font-family: 'Righteous', cursive;
 }
+
+div.formularioLogin{
+    padding-top: 5rem;
+}

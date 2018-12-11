@@ -8,9 +8,9 @@ use Doctrine\ORM\Mapping as ORM;
  * usuario_campos_afines
  *
  * @ORM\Table(name="usuario_campos_afines")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\usuario_campos_afinesRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\UsuarioCamposAfinesRepository")
  */
-class usuario_campos_afines
+class UsuarioCamposAfines
 {
     /**
      * @var int
@@ -50,7 +50,7 @@ class usuario_campos_afines
      *
      * @param string $usuarioId
      *
-     * @return usuario_campos_afines
+     * @return usuarioCamposAfines
      */
     public function setUsuarioId($usuarioId)
     {
@@ -74,7 +74,7 @@ class usuario_campos_afines
      *
      * @param string $campoAfinId
      *
-     * @return usuario_campos_afines
+     * @return usuarioCamposAfines
      */
     public function setCampoAfinId($campoAfinId)
     {

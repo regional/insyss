@@ -5,12 +5,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * estado_solicitud
+ * solicitud_nota
  *
- * @ORM\Table(name="estado_solicitud")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\estado_solicitudRepository")
+ * @ORM\Table(name="solicitud_nota")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\SolicitudNotaRepository")
  */
-class estado_solicitud
+class SolicitudNota
 {
     /**
      * @var int
@@ -29,11 +29,11 @@ class estado_solicitud
     private $solicitudId;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="usuario_id", type="integer")
+     * @ORM\Column(name="nota", type="string", length=255)
      */
-    private $usuarioId;
+    private $nota;
 
     /**
      * @var \DateTime
@@ -43,11 +43,11 @@ class estado_solicitud
     private $fecha;
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="estado", type="string", length=255)
+     * @ORM\Column(name="usuario_id", type="integer")
      */
-    private $estado;
+    private $usuarioId;
 
 
     /**
@@ -65,7 +65,7 @@ class estado_solicitud
      *
      * @param integer $solicitudId
      *
-     * @return estado_solicitud
+     * @return solicitudNota
      */
     public function setSolicitudId($solicitudId)
     {
@@ -85,27 +85,27 @@ class estado_solicitud
     }
 
     /**
-     * Set usuarioId
+     * Set nota
      *
-     * @param integer $usuarioId
+     * @param string $nota
      *
-     * @return estado_solicitud
+     * @return solicitudNota
      */
-    public function setUsuarioId($usuarioId)
+    public function setNota($nota)
     {
-        $this->usuarioId = $usuarioId;
+        $this->nota = $nota;
 
         return $this;
     }
 
     /**
-     * Get usuarioId
+     * Get nota
      *
-     * @return int
+     * @return string
      */
-    public function getUsuarioId()
+    public function getNota()
     {
-        return $this->usuarioId;
+        return $this->nota;
     }
 
     /**
@@ -113,7 +113,7 @@ class estado_solicitud
      *
      * @param \DateTime $fecha
      *
-     * @return estado_solicitud
+     * @return solicitudNota
      */
     public function setFecha($fecha)
     {
@@ -133,27 +133,27 @@ class estado_solicitud
     }
 
     /**
-     * Set estado
+     * Set usuarioId
      *
-     * @param string $estado
+     * @param integer $usuarioId
      *
-     * @return estado_solicitud
+     * @return solicitudNota
      */
-    public function setEstado($estado)
+    public function setUsuarioId($usuarioId)
     {
-        $this->estado = $estado;
+        $this->usuarioId = $usuarioId;
 
         return $this;
     }
 
     /**
-     * Get estado
+     * Get usuarioId
      *
-     * @return string
+     * @return int
      */
-    public function getEstado()
+    public function getUsuarioId()
     {
-        return $this->estado;
+        return $this->usuarioId;
     }
 }
 

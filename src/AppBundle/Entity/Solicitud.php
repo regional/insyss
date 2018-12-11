@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * solicitud
  *
  * @ORM\Table(name="solicitud")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\solicitudRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\SolicitudRepository")
  */
 class Solicitud
 {
@@ -60,6 +60,8 @@ class Solicitud
      */
 
     private $usuarioAsignado;
+
+
 
 
     /**
