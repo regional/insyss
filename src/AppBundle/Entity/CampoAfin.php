@@ -28,6 +28,17 @@ class CampoAfin
      */
     private $nombre;
 
+    /*
+     * @var
+     * @ORM\OneToMany(targetEntity="Solicitud", mappedBy="campoAfine")
+     */
+
+    private $camposAfines;
+
+
+
+
+
 
     /**
      * Get id

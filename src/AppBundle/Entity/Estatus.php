@@ -28,6 +28,19 @@ class Estatus
      */
     private $descripcion;
 
+    /*
+     * @var
+     * @ORM\OneToMany(targetEntity="Solicitud", mappedBy="estadoSolicitud")
+     */
+
+    private $Estado;
+
+    /*
+     * @var
+     * @ORM\OneToMany(targetEntity="EstadoSolicitud", mappedBy="estado")
+     */
+
+    private $estadoSolicitud;
 
     /**
      * Get id

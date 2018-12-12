@@ -27,12 +27,15 @@ class UsuarioCamposAfines
      */
     private $usuarioId;
 
+
     /**
-     * @var string
+     * @var Usuario
      *
-     * @ORM\Column(name="campo_afin_id", type="string", length=255)
+     *
+     * @ORM\ManyToOne(targetEntity="Usuario", inversedBy="camposAfines")
      */
-    private $campoAfinId;
+
+    private $campoAfin;
 
 
     /**

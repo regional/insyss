@@ -43,11 +43,23 @@ class SolicitudNota
     private $fecha;
 
     /**
-     * @var int
+     * @var Solicitud
      *
-     * @ORM\Column(name="usuario_id", type="integer")
+     *
+     * @ORM\ManyToOne(targetEntity="Solicitud", inversedBy="misSolicitudes")
      */
-    private $usuarioId;
+
+    private $solicitud;
+
+    /**
+     * @var Usuario
+     *
+     *
+     * @ORM\ManyToOne(targetEntity="Solicitud", inversedBy="usuarioNota")
+     */
+
+    private $Usuario;
+
 
 
     /**

@@ -67,6 +67,23 @@ class Usuario implements UserInterface,  \Serializable
 
     private $misSolicitudes;
 
+    /*
+     * @var
+     * @ORM\OneToMany(targetEntity="UsuarioCamposAfines", mappedBy="campoAfin")
+     */
+
+    private $camposAfines;
+
+    /*
+     * @var
+     * @ORM\OneToMany(targetEntity="SolicitudNota", mappedBy="Usuario")
+     */
+
+    private $usuarioNota;
+
+
+
+
     /**
      * Usuario constructor.
      * @param int $id

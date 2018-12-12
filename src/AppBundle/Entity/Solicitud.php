@@ -61,6 +61,38 @@ class Solicitud
 
     private $usuarioAsignado;
 
+    /**
+     * @var Estatus
+     *
+     *
+     * @ORM\ManyToOne(targetEntity="Estatus", inversedBy="Estado")
+     */
+
+    private $estadoSolicitud;
+
+    /**
+     * @var CampoAfin
+     *
+     *
+     * @ORM\ManyToOne(targetEntity="CampoAfin", inversedBy="camposAfines")
+     */
+
+    private $campoAfine;
+
+    /*
+     * @var
+     * @ORM\OneToMany(targetEntity="Solicitud", mappedBy="solicitud")
+     */
+
+    private $misSolicitudes;
+
+    /*
+     * @var
+     */
+
+    private $solicitud;
+
+
 
 
 

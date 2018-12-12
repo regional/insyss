@@ -22,20 +22,6 @@ class EstadoSolicitud
     private $id;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="solicitud_id", type="integer")
-     */
-    private $solicitudId;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="usuario_id", type="integer")
-     */
-    private $usuarioId;
-
-    /**
      * @var \DateTime
      *
      * @ORM\Column(name="fecha", type="date")
@@ -43,12 +29,20 @@ class EstadoSolicitud
     private $fecha;
 
     /**
-     * @var string
+     * @var Solicitud
      *
-     * @ORM\Column(name="estado", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="CampoAfin", inversedBy="camposAfines")
      */
-    private $estado;
 
+    private $solicitud;
+
+    /**
+     * @var Estatus
+     *
+     * @ORM\ManyToOne(targetEntity="Estatus", inversedBy="estadoSolicitud")
+     */
+
+    private $estado;
 
     /**
      * Get id

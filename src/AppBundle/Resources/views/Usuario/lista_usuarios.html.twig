@@ -9,5 +9,9 @@
     {% for usuario in usuarios %}
         <li>{{ usuario.nombre }} - {{ usuario.email }}</li>
     {% endfor %}
+
+    {% for campoafin in camposafines %}
+        <li>{{ campoafin.nombre }}</li>
+    {% endfor %}
 {% endblock %}
 
