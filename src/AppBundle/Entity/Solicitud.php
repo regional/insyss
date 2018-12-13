@@ -177,5 +177,101 @@ class Solicitud
     {
         return $this->fecha;
     }
+
+    /**
+     * Set usuarioSolicitante
+     *
+     * @param string $usuarioSolicitante
+     *
+     * @return usuarioSolicitante
+     */
+    public function setusuarioSolicitante($usuarioSolicitante)
+    {
+        $this->usuarioSolicitante = $usuarioSolicitante;
+
+        return $this;
+    }
+
+    /**
+     * Get usuarioSolicitante
+     *
+     * @return \string
+     */
+    public function getusuarioSolicitante()
+    {
+        return $this->usuarioSolicitante;
+    }
+
+    /**
+     * Set usuarioAsignado
+     *
+     * @param string $usuarioAsignado
+     *
+     * @return usuarioAsignado
+     */
+    public function setusuarioAsignado($usuarioAsignado)
+    {
+        $this->usuarioAsignado = $usuarioAsignado;
+
+        return $this;
+    }
+
+    /**
+     * Get usuarioAsignado
+     *
+     * @return \string
+     */
+    public function getusuarioAsignado()
+    {
+        return $this->usuarioAsignado;
+    }
+
+    /**
+     * Set estadoSolicitud
+     *
+     * @param string $estadoSolicitud
+     *
+     * @return estadoSolicitud
+     */
+    public function setestadoSolicitud($estadoSolicitud)
+    {
+        $this->estadoSolicitud = $estadoSolicitud;
+
+        return $this;
+    }
+
+    /**
+     * Get estadoSolicitud
+     *
+     * @return \string
+     */
+    public function getestadoSolicitud()
+    {
+        return $this->estadoSolicitud;
+    }
+
+    /**
+     * Set campoAfine
+     *
+     * @param string $campoAfine
+     *
+     * @return campoAfine
+     */
+    public function setcampoAfine($campoAfine)
+    {
+        $this->campoAfine = $campoAfine;
+
+        return $this;
+    }
+
+    /**
+     * Get campoAfine
+     *
+     * @return \string
+     */
+    public function getcampoAfine()
+    {
+        return $this->campoAfine;
+    }
 }
 
